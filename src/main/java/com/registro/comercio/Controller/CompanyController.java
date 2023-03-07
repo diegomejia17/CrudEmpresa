@@ -16,15 +16,15 @@ import java.util.List;
 @RequestMapping("/api/companies")
 public class CompanyController {
     private final ComerceServiceImpl companyServiceImpl;
-    @GetMapping("/")
+    @GetMapping("")
     public List<Company> getAll(){
         return companyServiceImpl.getAll();
     }
     @GetMapping("/{id}")
-    public Company get(Long id){
+    public Company get (@PathVariable  Long id){
         return companyServiceImpl.get(id);
     }
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<CompanyDTO> save(@RequestBody CompanyDTO companyDTO){
         return companyServiceImpl.save(companyDTO);
     }

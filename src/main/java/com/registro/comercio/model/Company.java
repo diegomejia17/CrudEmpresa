@@ -25,7 +25,7 @@ public class Company {
     private Date foundationDate;
     @Column(length = 50, name = "address", nullable = false)
     private String address;
-    @Column( name = "nit", nullable = false)
+    @Column( name = "nit", nullable = false ,length = 20)
     private String nit;
 
 
